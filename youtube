@@ -1,0 +1,21 @@
+package com.example.firebase
+
+class Youtube {
+    // user model class
+
+
+    var name = String? = null
+            var video = String? = null
+                    var status = String? = null
+
+                            constructor(){}
+
+
+    constructor(name: String? images: String? status: String?) {
+
+    }
+
+    this.name = name
+    this.image = video
+    this.status = status
+}
