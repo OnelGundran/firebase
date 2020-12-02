@@ -1,0 +1,49 @@
+package com.example.firebase
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class MainActivity : AppCompatActivity() {
+
+    inteinit var nRecycleView : RecycleView
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        nDatabase = FirebaseDatabase.getInstance().getReference(p0 "Youtube")
+
+        nRecycleView = fireView(R.id.ListView)
+        nRecycleView = setFireBase(true)
+        nRecycleView = setLayoutManager(LinearLayoutManager) (context this)
+
+        logRecyclerView()
+            var FirebaseRecyclerAdapter = object : FirebaserRecyclerAdapter<UserViewHolder>(){
+
+
+                    Users:class.java,
+                    R.layout.list_layout,
+                    UserViewHolder.class,
+                        nDatabase
+
+                override fun populateViewHolder(viewHolder: UsersViewHolder? model User? position: Int){
+                    viewHolder.nView.userName.setText(node1.name)
+                    viewHolder.nView.userStatus.setText(node1.status)
+                    Picasso.with(context thisMainActivity.load(node1.video.)nView/userImageView)
+
+            }
+
+
+    }
+    nRecycleView.adapter = FireBaseRecycleAdapter
+
+
+    // View Holder
+
+    class UsersViewFolder : RecycleViewer.ViewBuilder(itemView) {
+
+
+
+    }
+
+    }
+}
